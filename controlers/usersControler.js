@@ -29,7 +29,7 @@ const registerUsers = async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     //create user
     const user = await userModel.create({
-      avatar: `${req.protocol}://${req.get("host")}/images/avatar.png`,
+      avatar: `https://sellbdapi.onrender.com/images/avatar.png`,
       username,
       email,
       password: hashedPassword,
